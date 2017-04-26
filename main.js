@@ -455,4 +455,10 @@ angular
 
 function chooseCtrl() {
   this.pkmn = pokemon
+  this.removePkmn = function(item) {
+    console.log(item)
+    let index = this.pkmn.indexOf(item)
+    console.log(index)
+    this.pkmn.splice(index, 1)
+  }
 }

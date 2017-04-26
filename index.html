@@ -8,8 +8,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
-  <body>
+  <body ng-controller='chooseCtrl as vm'>
+    <h2>Eliminate one</h2>
+    <div ng-repeat='pkmn in vm.pkmn | limitTo: 7'>
+      <button ng-click='vm.removePkmn(pkmn)'>{{$index + 1}}. {{pkmn}}</button><br/>
 
+    </br/>
+    </div>
     <!-- jquery -->
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
      <!-- Latest compiled JavaScript -->
