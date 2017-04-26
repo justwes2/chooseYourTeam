@@ -448,3 +448,11 @@ const pokemon = [
   "Magearna",
   "Marshadow"
 ]
+
+angular
+  .module('chooseApp', [])
+  .controller('chooseCtrl', [chooseCtrl])
+
+function chooseCtrl() {
+  this.pkmn = pokemon
+}
