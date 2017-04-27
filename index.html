@@ -10,12 +10,13 @@
   </head>
   <body ng-controller='chooseCtrl as vm'>
     <h1>Choose Your Team!</h1>
-    <p>Congratulations, trainer, you've successfully captured every pokemon discovered. </p>
-    <h2>Eliminate one</h2>
-    <div ng-repeat='pkmn in vm.pkmn | limitTo: 7'>
-      <button ng-click='vm.removePkmn(pkmn)'>{{$index + 1}}. {{pkmn}}</button><br/>
-
-    </br/>
+    <p>Congratulations, trainer, you've successfully captured every pokemon discovered. Now you have to decide which six you will take with you to the pokemon league. Click on one to elimiate it until only six remain.</p>
+    <p>Eliminate one:</p>
+    <div class="container">
+      <div ng-repeat='pkmn in vm.pkmn | limitTo: 7'>
+        <button ng-click='vm.removePkmn(pkmn)'><img src="images/icon.png"/> {{pkmn}}</button><br/>
+      </br/>
+      </div>
     </div>
     <!-- jquery -->
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
